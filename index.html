@@ -3,17 +3,12 @@
     <head>
         <!--Stylesheets-->
         <link href="stylesheet.css" rel="stylesheet" type="text/css">
-        <link href="offline/normalize.css" rel="stylesheet" type="text/css">
-        <!--Network Dependent Resources-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-        <!--
+        <!--Scripts-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 
-        -->
-
-        <script src="offline/angular.min.js"></script>
-        <!--Internal Scripts-->
         <script src="main.js"></script>
 
     </head>
@@ -22,14 +17,15 @@
         <main>
             <form ng-show="form.isVisible" ng-controller="formCtrl" ng-submit="submitForm()">
                 <div ng-repeat="field in formFields">
-                    <input class="userInput" type="text" placeholder="Input time" ng-model="field.time" ng-change="calcDependencies($index, 'time')" autofocus/>
+                    <input class="userInput" type="text" placeholder="Input time (min)" ng-model="field.time" ng-change="calcDependencies($index, 'time')" autofocus/>
                     <input class="userInput" type="text" placeholder="Input questions"  ng-model="field.questions" ng-change="calcDependencies($index, 'questions')"/>
-                    <input class="userInput" type="text" placeholder="Time per question" ng-model="field.questionDelay" ng-change="calcDependencies($index, 'questionDelay')">
+                    <input class="userInput" type="text" placeholder="Time per question (sec)" ng-model="field.questionDelay" ng-change="calcDependencies($index, 'questionDelay')">
                 </div>
                 <button class="actionButton" ng-click="clearInputRows()" type="button">Clear All</button>
                 <input class="actionButton" type="button" value="Add Row" ng-click="addInputRow()">
                 <input class="actionButton" type="submit" value="Start">
-                <p>{{formFields}}</p>
+
+                <!-- <p>{{formFields}}</p> -->
             </form>
             <div ng-controller="timerCtrl" ng-show="timer.isVisible">
                 <div class='timer'>
