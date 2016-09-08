@@ -1,0 +1,115 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #333333;
+    color: white;
+    height: 78px;
+}
+
+#header{
+    padding: 20px 30px;
+    display: inline-block;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline;
+}
+
+nav{
+    float:right;
+    height:100%;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+#nav li{
+    height:78px;
+    line-height:78px;
+    padding:0px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#nav li:hover{
+    background-color: #404040;
+}
+
+.blur{
+	-webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    opacity: 0.6;
+}
+
+#heroImg{
+    width: 100%;
+    height:500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.timer{
+    padding: 50px;
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+.arTimer{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    height: 321px;
+}
+
+p{
+    margin: 0px 0px 50px 0px;
+}
+
+form{
+    margin: auto;
+    padding-top:50px;
+    display: inline-block;
+}
+
+.userInput{
+    padding: 15px;
+    border: none;
+    width: 150px;
+    margin-bottom: 10px;
+    border: 1px solid #e3e3e3;
+}
+.actionButton{
+    padding: 15px;
+    min-width: 150px;
+    border: 1px solid #C62828;
+    background-color: #C62828;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
